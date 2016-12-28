@@ -2,20 +2,18 @@
 
 import * as express from "express";
 import Validator from "../common/validator";
-import AboutFactory from "../views/about/factories/subfolder/aboutFactory";
+import HomeController from "../controllers/homeController";
+import AboutController from "../controllers/aboutController";
+import iController from "../interfaces/controller.interface"
 
 class SiteRouter {
     constructor(app: any) {
-        app.get('/', (req: express.Request, res: express.Response) => {
-            Validator.isEmptyString("hahsdfs");
-            var aboutFactory = new AboutFactory();
-            aboutFactory.getInstance();
-            res.render('home/home.ejs');
-        });
+        this.setRoute(app, '/', new HomeController());
+        this.setRoute(app, '/about', new AboutController());
+    }
 
-        app.get('/about', (req: express.Request, res: express.Response) => {
-            return res.render('about/about.ejs');
-        });
+    setRoute(app: any, path: any, controller: iController) {
+        app.get(path, controller.loadView.bind(controller));
     }
 }
 
