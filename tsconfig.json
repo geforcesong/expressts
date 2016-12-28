@@ -1,14 +1,13 @@
 {
-    "files": [
-        "./app.ts"
-    ],
     "include": [
-        "web/**/*"
+        "web/**/*",
+        "app.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5",
         "outDir": "dist",
-        "module": "commonjs"
+        "module": "commonjs",
+        "sourceMap": true
     }
 }

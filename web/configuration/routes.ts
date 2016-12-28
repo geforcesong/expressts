@@ -1,10 +1,12 @@
 'use strict';
 
 import * as express from "express";
+import Validator from "../common/validator";
 
 class SiteRouter {
     constructor(app: any) {
         app.get('/', (req: express.Request, res: express.Response) => {
+            Validator.isEmptyString("hahsdfs")
             res.render('home/home.ejs');
         });
 
