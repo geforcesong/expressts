@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/app.js",
-    "build": "tsc"
+    "build": "tsc",
+    "buildProduct": "tsc -p tsconfig.prod.json"
   },
   "author": "",
   "license": "ISC",
