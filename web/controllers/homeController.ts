@@ -1,5 +1,6 @@
 import BaseController from "../controllers/baseController";
 import * as express from "express";
+import * as _ from "lodash"
 
 class HomeController extends BaseController {
     constructor(){
