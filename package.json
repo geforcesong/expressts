@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/app.js",
-    "build": "tsc",
+    "start": "tsc && node ./dist/app.js",
     "buildProduct": "tsc -p tsconfig.prod.json"
   },
   "author": "",
