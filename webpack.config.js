@@ -1,9 +1,11 @@
 var webpack = require('webpack');
+const package = require('./package.json');
+
 module.exports = {
     entry: './web/views/about/client/main.ts',
     output: {
         path: './public/build',
-        filename: 'app.bundle.js'
+        filename: `app.${package.version}.bundle.js`
     },
     module: {
         loaders: [
