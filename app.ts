@@ -6,6 +6,7 @@ class Server {
     app: any;
     constructor() {
         this.app = express();
+        this.app.use(express.static('public'))
         new SiteRouter(this.app);
         this.app.set('views', path.join(__dirname, '..', 'web', 'views'));
         this.app.set('view engine', 'ejs');

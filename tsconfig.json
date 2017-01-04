@@ -8,6 +8,9 @@
         "target": "es5",
         "outDir": "dist",
         "module": "commonjs",
-        "sourceMap": true
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": ["dom", "es6"]
     }
 }
