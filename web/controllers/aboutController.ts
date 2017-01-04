@@ -10,7 +10,7 @@ class AboutController extends BaseController {
     loadView(req: express.Request, res: express.Response, next?: express.NextFunction): void {
         this.initialize(req, res, next);
         let aboutPage = new AboutPage();
-        res.render('about/about.ejs', aboutPage);
+        this.renderPage('about/about.ejs', aboutPage);
     }
 
     loadOtherView(req: express.Request, res: express.Response, next?: express.NextFunction): void {

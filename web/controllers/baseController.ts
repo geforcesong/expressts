@@ -5,7 +5,7 @@ class BaseController implements iController {
     req: express.Request;
     res: express.Response;
     next: express.NextFunction;
-    
+
     loadView(req: express.Request, res: express.Response, next?: express.NextFunction): void {
         throw new Error("Not implemented");
     }
@@ -31,6 +31,12 @@ class BaseController implements iController {
                 Location: url
             });
             this.res.end();
+        }
+    }
+
+    renderPage(path: string, model: Object) {
+        if (!this.res.headersSent) {
+            this.res.render(path, model);
         }
     }
 }
