@@ -1,5 +1,5 @@
 <%- include('../common/header.ejs') %>
     <%=locals.appUrl%>
     <my-app>Loading...</my-app>
-    <script type="text/javascript" src="/build/app.bundle.js"></script>
+    <script type="text/javascript" src="/build/app.<%=locals.pkgVersion%>.bundle.js"></script>
 <%- include('../common/footer.ejs') %>

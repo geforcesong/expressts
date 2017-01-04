@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AppComponent } from './app.component';
+import { H1Component } from './components/h1/h1.component';
 import { HttpModule } from '@angular/http';
 @NgModule({
   imports: [
@@ -10,8 +10,8 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   declarations: [
-    AppComponent
+    H1Component
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [H1Component]
 })
 export class AppModule { }
