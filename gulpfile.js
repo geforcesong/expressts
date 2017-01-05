@@ -1,14 +1,19 @@
 const gulp = require('gulp');
 const less = require('gulp-less');
-var concat = require('gulp-concat');
+const concat = require('gulp-concat');
 const packageObject = require('./package.json');
+const del = require('del');
+
+gulp.task("clean", ()=>{
+    del(['./public/build']);
+});
 
 gulp.task("compile less",function(){
-    var fileName = `site.${packageObject.version}.css`
+    let fileName = `site.${packageObject.version}.css`
     gulp.src(['./web/views/**/*.less'])
         .pipe(less())
         .pipe(concat(fileName))
         .pipe(gulp.dest('./public/build'));
 })
 
-gulp.task('default', ['compile less']);
+gulp.task('default', ['clean', 'compile less']);
