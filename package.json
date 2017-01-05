@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./dist/app.js",
     "build": "gulp && tsc && webpack --progress",
+    "dev": "concurrently \"npm run build\" \"webpack --watch\" \"gulp develop\" \"npm start\"",
     "buildProduct": "tsc -p tsconfig.prod.json"
   },
   "author": "",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "angular2-template-loader": "0.5.0",
+    "concurrently": "^3.1.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
