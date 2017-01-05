@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./dist/app.js",
     "build": "tsc && webpack --progress",
-    "buildProduct": "tsc -p tsconfig.prod.json"
+    "buildProduct": "tsc -p tsconfig.prod.json",
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +18,6 @@
     "express": "^4.14.0",
     "lodash": "^4.17.3",
     "typescript": "^2.1.4",
-
     "@angular/common": "2.2.0",
     "@angular/compiler": "2.2.0",
     "@angular/core": "2.2.0",
@@ -36,11 +36,12 @@
     "zone.js": "0.6.25"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "webpack": "^1.13.3",
     "angular2-template-loader": "0.5.0",
-    "raw-loader": "0.5.1",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
     "html-webpack-plugin": "2.22.0",
-    "ts-loader": "^0.9.5"
+    "raw-loader": "0.5.1",
+    "ts-loader": "^0.9.5",
+    "webpack": "^1.13.3"
   }
 }
