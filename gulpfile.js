@@ -4,6 +4,10 @@ const concat = require('gulp-concat');
 const packageObject = require('./package.json');
 const del = require('del');
 
+let paths = {
+  less: ['./web/views/**/*.less']
+};
+
 gulp.task("clean", ()=>{
     del(['./public/build']);
 });
@@ -16,4 +20,9 @@ gulp.task("compile less",function(){
         .pipe(gulp.dest('./public/build'));
 })
 
+gulp.task('watch', function() {
+  gulp.watch(paths.less, ['compile less']);
+});
+
 gulp.task('default', ['clean', 'compile less']);
+gulp.task('develop', ['clean', 'compile less', 'watch']);
