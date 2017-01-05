@@ -9,10 +9,15 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /\.component.ts$/, loader: 'ts!angular2-template'},
-            {test: /\.ts$/, exclude: /\.component.ts$/, loader: 'ts'},
-            {test: /\.html$/, loader: 'raw'},
-            {test: /\.css$/, loader: 'raw'}
+            { test: /\.component.ts$/, loader: 'ts!angular2-template' },
+            { test: /\.ts$/, exclude: /\.component.ts$/, loader: 'ts' },
+            { test: /\.html$/, loader: 'raw' },
+            { test: /\.css$/, loader: 'raw' },
+            {
+                test: /\.less$/,
+                exclude: /node_modules/,
+                loaders: ["raw-loader", "less-loader"]
+            }
         ]
     },
     resolve: {
