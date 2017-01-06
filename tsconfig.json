@@ -3,6 +3,9 @@
         "web/**/*",
         "app.ts"
     ],
+    "exclude": [
+        "web/**/client/*"
+    ],
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5",
@@ -11,6 +14,9 @@
         "sourceMap": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "lib": ["dom", "es6"]
+        "lib": [
+            "dom",
+            "es6"
+        ]
     }
 }
