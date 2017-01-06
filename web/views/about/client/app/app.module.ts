@@ -14,6 +14,6 @@ import { HttpModule } from '@angular/http';
     H1Component,
     H2Component
   ],
-  bootstrap: [H1Component]
+  bootstrap: [H1Component, H2Component]
 })
 export class AppModule { }
