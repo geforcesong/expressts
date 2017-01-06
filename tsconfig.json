@@ -3,11 +3,20 @@
         "web/**/*",
         "app.ts"
     ],
+    "exclude": [
+        "web/**/client/*"
+    ],
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "es5",
         "outDir": "dist",
         "module": "commonjs",
-        "sourceMap": true
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": [
+            "dom",
+            "es6"
+        ]
     }
 }
