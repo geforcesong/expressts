@@ -1,5 +1,6 @@
 <%- include('../common/header.ejs') %>
-    <%=locals.appUrl%>
+    
+    <input type="text" [(ngModel)]="heroName">
     <my-app>Loading...</my-app>
     <script type="text/javascript" src="/build/app.<%=locals.pkgVersion%>.bundle.js"></script>
 <%- include('../common/footer.ejs') %>

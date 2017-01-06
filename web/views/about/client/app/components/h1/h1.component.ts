@@ -5,4 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'h1.component.html',
   styleUrls: [ 'h1.component.less' ]
 })
-export class H1Component { name = 'Angular H1 Component'; }
+export class H1Component { 
+  name = 'Angular H1 Component'; 
+  heroName = "assfs"
+}
