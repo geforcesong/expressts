@@ -10,6 +10,7 @@ let paths = {
 
 gulp.task("clean", ()=>{
     del(['./public/build']);
+    del(['./dist']);
 });
 
 gulp.task("compile less",function(){
