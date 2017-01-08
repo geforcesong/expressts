@@ -30,5 +30,6 @@ module.exports = {
         // new HtmlWebpackPlugin({
         //     template: './web/views/about/about.ejs'
         // })
+        new webpack.optimize.CommonsChunkPlugin(`common.${package.version}.js`)
     ]
 };
