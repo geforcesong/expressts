@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node ./dist/app.js",
-    "buildProduct": "tsc -p tsconfig.prod.json"
+    "buildProduct": "tsc -p tsconfig.prod.json",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -15,10 +16,25 @@
     "ejs": "^2.5.5",
     "express": "^4.14.0",
     "lodash": "^4.17.3",
-    "typescript": "^2.1.4"
+    "typescript": "^2.1.4",
+    "vue": "^1.0.27",
+    "vue-router": "^0.7.13",
+    "vuex": "^1.0.0-rc.2"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-typescript": "^3.1.3"
+    "gulp-typescript": "^3.1.3",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "html-webpack-plugin": "^2.22.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^0.13.0",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^8.5.4",
+    "vue-style-loader": "^1.0.0",
+    "webpack": "^1.13.2"
   }
 }
