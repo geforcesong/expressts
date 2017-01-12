@@ -1,14 +1,20 @@
 <template>
     <h1 v-on:click="click">
         home vue template
+        <homesub></homesub>
     </h1>
 </template>
 <script>
+    import homeSub from './homeSubtitle.vue';
+
     export default {
         methods: {
-            click(){
+            click() {
                 alert("haha");
             }
+        },
+        components: {
+            'homesub': homeSub
         }
     }
 </script>
