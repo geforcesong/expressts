@@ -3,6 +3,13 @@
         home vue template updated 111 {{title}}
         <homesub></homesub>
     </h1>
+
+    <span v-if="seen" v-bind:title="message">aaa</span>
+    <ol>
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
 </template>
 <script>
     import homeSub from './homeSubtitle.vue';
@@ -18,7 +25,14 @@
         },
         data: function () {
             return {
-                title: "dynamic title"
+                title: "dynamic title",
+                message: `You loaded this page on ${new Date()}`,
+                seen: false,
+                todos: [
+                    { text: 'Learn JavaScript' },
+                    { text: 'Learn Vue' },
+                    { text: 'Build something awesome' }
+                ]
             }
         }
     }
