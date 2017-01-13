@@ -1,6 +1,6 @@
 <template>
     <h1 v-on:click="click">
-        home vue template
+        home vue template updated 111 {{title}}
         <homesub></homesub>
     </h1>
 </template>
@@ -10,11 +10,16 @@
     export default {
         methods: {
             click() {
-                alert("haha");
+                alert(this.title);
             }
         },
         components: {
             'homesub': homeSub
+        },
+        data: function () {
+            return {
+                title: "dynamic title"
+            }
         }
     }
 </script>
