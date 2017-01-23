@@ -1,20 +1,20 @@
 <template>
-    <h1 v-on:click="click">
-        home vue template updated 111 {{title}}
-        <homesub></homesub>
-    </h1>
-    <div class="box">
-        <h2 class="h2">{{revertTitle}}</h2>
+    <div>
+        <h1 v-on:click="click">
+            home vue template updated 111 {{title}}
+        </h1>
+        <div class="box">
+            <h2 class="h2">{{revertTitle}}</h2>
+        </div>
+        <span v-if="seen" v-bind:title="message">aaa</span>
+        <ol>
+            <li class="test" v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
     </div>
-    <span v-if="seen" v-bind:title="message">aaa</span>
-    <ol>
-        <li class="test" v-for="todo in todos">
-            {{todo.text}}
-        </li>
-    </ol>
 </template>
 <script>
-    import homeSub from './homeSubtitle.vue';
 
     export default {
         methods: {
@@ -22,9 +22,6 @@
                 alert(this.title);
                 this.title = "hello world";
             }
-        },
-        components: {
-            'homesub': homeSub
         },
         data: function () {
             return {
