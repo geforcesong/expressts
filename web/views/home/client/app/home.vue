@@ -3,6 +3,9 @@
         <h1 v-on:click="click">
             home vue template updated 111 {{title}}
         </h1>
+        <h2>
+            <sub-title></sub-title>
+        </h2>
         <div class="box">
             <h2 class="h2">{{revertTitle}}</h2>
         </div>
@@ -15,8 +18,11 @@
     </div>
 </template>
 <script>
-
+    import SubTitle from './homeSubtitle.vue'
     export default {
+        components: {
+            'sub-title': SubTitle
+        },
         methods: {
             click() {
                 alert(this.title);
