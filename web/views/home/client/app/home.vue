@@ -151,10 +151,14 @@
 </script>
 
 <style lang="less" scoped>
+   @import "../../../../../node_modules/bootstrap/less/mixins/border-radius.less";
     @base: #f938ab;
     
     h1 {
         color: red;
+        .border-top-radius(5px);
+        .border-bottom-radius(5px);
+        border: solid 1px red;
     }
     h2 {
         color: pink;
