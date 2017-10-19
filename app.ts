@@ -8,7 +8,7 @@ class Server {
         this.app = express();
         new SiteRouter(this.app);
         this.app.set('views', path.join(__dirname, '..', 'web', 'views'));
-        this.app.set('view engine', 'ejs');
+        this.app.set('view engine', 'pug');
     }
 
     run() {
